@@ -38,3 +38,27 @@ nav {
   background: blur(8px);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
 }
+
+nav img {
+  width: 200px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+li a {
+  margin-left: 40px;
+}
+
+nav a {
+  color: cadetblue;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+
