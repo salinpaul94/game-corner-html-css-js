@@ -84,6 +84,12 @@ p {
   padding: 10px;
 }
 
+.row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .Branchs-col {
   flex-basis: 31%;
   background-color: #e3ae57;
@@ -103,6 +109,20 @@ h3 {
   text-align: center;
   font-weight: 600;
   margin: 10px;
+}
+
+.Branchs-col img {
+  width: 350px;
+  border-radius: 12px;
+  border-top-right-radius: 30%;
+  border-bottom-left-radius: 30%;
+}
+
+.row1 {
+  margin-left: 20%;
+  margin-right: 20%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .Branchs-col1 {
@@ -129,6 +149,12 @@ h3 {
 
 .Branchs-col2:hover {
   box-shadow: 0 0 40px 0px rgba(0, 0, 0, 1);
+}
+
+.Branchs-col1 img,
+.Branchs-col2 img {
+  width: 350px;
+  border-radius: 12px;
 }
 
 .footer {
