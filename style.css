@@ -37,6 +37,7 @@ nav {
   padding: 25px 35px;
   background: blur(8px);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 nav img {
@@ -73,6 +74,7 @@ h1 {
   font-weight: 600;
   color: #febd69;
   text-shadow: 20px;
+  padding-top: 30px;
 }
 
 p {
