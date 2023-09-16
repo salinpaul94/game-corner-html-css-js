@@ -11,5 +11,32 @@
     />
     <link rel="stylesheet" href="NumberGame/style.css" />
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <a href="learn.html">Play and Learn</a>
+      <img
+        src="images/onlinelogomaker-021122-1433-5880.png"
+        alt="website logo"
+      />
+      <ul>
+        <li>
+          <a href="home.html">Home</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h3>I am thinking of a number between 1-100.</h3>
+      <h3>Can you guess it?</h3>
+
+      <input type="text" placeholder="Enter your guess" />
+      <br />
+      <button id="my_btn" onclick="play()">MY GUESS</button>
+
+      <p id="message1">No. Of Guesses remaining: 0</p>
+      <p id="message2">Guessed Numbers are: None</p>
+      <p id="message3"></p>
+    </div>
+    <script src="NumberGame/script.js"></script>
+  </body>
 </html>
