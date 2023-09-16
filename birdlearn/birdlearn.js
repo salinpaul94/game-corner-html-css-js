@@ -1,6 +1,7 @@
 const main = document.querySelector("main");
-const textarea = document.getElementById("voice");
-const readBtn = document.getElementById("text");
+const voiceSelect = document.getElementById("voice");
+const textarea = document.getElementById("text");
+const readBtn = document.getElementById("read");
 const toggleBtn = document.getElementById("toggle");
 const closeBtn = document.getElementById("close");
 
@@ -15,11 +16,15 @@ const data = [
   },
   {
     image: "zbirdturkey.jpg",
-    text: "turke",
+    text: "turkey",
   },
   {
     image: "zbirdpeacock.jpg",
     text: "peacock",
+  },
+  {
+    image: "zbirdparrot.jpg",
+    text: "owl",
   },
   {
     image: "zbirdowl.jpg",
@@ -45,8 +50,8 @@ function createBox(item) {
   const box = document.createElement("div");
   const { image, text } = item;
   box.classList.add("box");
-  box.innerHtml = `
-    <img srd="${image}" alt="${text}" />
+  box.innerHTML = `
+    <img src="${image}" alt="${text}" />
     <p class="info">${text}</p>
   `;
   box.addEventListener("click", () => {
