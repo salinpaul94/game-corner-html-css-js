@@ -31,12 +31,12 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(0, 0, 0, 0);
+  background: rgb(223, 99, 27);
   position: fixed;
   top: 0;
   padding: 25px 35px;
   background: blur(8px);
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
 }
 
 nav img {
