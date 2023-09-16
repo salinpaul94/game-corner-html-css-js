@@ -65,7 +65,7 @@ nav a {
   width: 100%;
   margin: auto;
   text-align: center;
-  padding-top: 200px;
+  padding-top: 100px;
 }
 
 h1 {
@@ -73,7 +73,6 @@ h1 {
   font-weight: 600;
   color: #febd69;
   text-shadow: 20px;
-  padding-bottom: 20px;
 }
 
 p {
@@ -102,7 +101,7 @@ p {
 }
 
 .Branchs-col:hover {
-  box-shadow: 0 0 20px 0x rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
 
 h3 {
@@ -177,7 +176,7 @@ h3 {
   color: red;
 }
 
-.sub-color_ {
+.sub-color {
   background-color: #dc3d24;
 }
 
