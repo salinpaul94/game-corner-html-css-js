@@ -25,3 +25,16 @@
   color: chocolate;
   transition: 1s;
 }
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0);
+  position: fixed;
+  top: 0;
+  padding: 25px 35px;
+  background: blur(8px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
