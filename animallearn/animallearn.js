@@ -2,12 +2,12 @@ const main = document.querySelector("main");
 const voiceSelect = document.getElementById("voice");
 const textarea = document.getElementById("text");
 const readBtn = document.getElementById("read");
-const toggleBtn = document.getElementById("toogle");
+const toggleBtn = document.getElementById("toggle");
 const closeBtn = document.getElementById("close");
 
 const data = [
   {
-    image: "zanimacat.jpt",
+    image: "zanimacat.jpg",
     text: "cat",
   },
 ];
