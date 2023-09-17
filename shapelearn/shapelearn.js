@@ -10,6 +10,38 @@ const data = [
     image: "zshapecircle.png",
     text: "circle",
   },
+  {
+    image: "zshapehexagon.png",
+    text: "hexagon",
+  },
+  {
+    image: "zshapeheptagon.png",
+    text: "heptagon",
+  },
+  {
+    image: "zshapeoval.png",
+    text: "oval",
+  },
+  {
+    image: "zshaperectangle.png",
+    text: "rectangle",
+  },
+  {
+    image: "zshapesquare.png",
+    text: "square",
+  },
+  {
+    image: "zshapestar.png",
+    text: "star",
+  },
+  {
+    image: "zshapetriangle.png",
+    text: "triangel",
+  },
+  {
+    image: "zshapepentagon.png",
+    text: "pentagon",
+  },
 ];
 
 data.forEach(createBox);
@@ -19,7 +51,7 @@ function createBox(item) {
   const { image, text } = item;
   box.classList.add("box");
   box.innerHTML = `
-    <img srd="${image}" alt="${text}" />
+    <img src="${image}" alt="${text}" />
     <p class="info">${text}</p>
   `;
   box.addEventListener("click", () => {
