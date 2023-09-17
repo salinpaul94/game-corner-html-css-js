@@ -224,3 +224,90 @@ var gameObj = {
 
   inti: null,
 };
+
+var controller = function() {
+  var startX = 0;
+  var startY = 0;
+  var ready = 0;
+
+  this.start = function(x,y) {
+    ready = 1;
+    startX = x;
+    startY = y;
+  };
+  
+  this.move = function(x,y) {
+    if(x-startX > 100 && ready) {
+      gameObj.move(0, 1);
+      ready = 0;
+    } else if (startX - x > 100 && ready) {
+      gameObj.move(0, 0);
+      ready = 0;
+    } else if (startY - y > 100 && ready) {
+      gameObj.move(1, 0);
+      ready = 0;
+    } else if (y - startY > 100 && ready) {
+      gameObj.move(1, 1);
+      ready = 0;
+    }
+  }
+  this.end = function(x, y) {
+    ready = 0;
+  }
+  return {
+    start: this.start,
+    move: this.move,
+    end: this.end
+  }
+}();
+
+function disableSelection(target) {
+  if (typeof target.onselectstart != "undefined")
+    target.onselectstart = function(){return false}
+  else if (typeof target.style.MoxUserSelect != "undefined")
+    target.style.MozUserSelect = "none"
+  else
+    target.onmousedown=function(){return false}
+  target.style.cursor = "defult"
+}
+
+window.onload = function() {
+  gameObj.intiStage();
+  gameObj.newBox();
+
+  var stage = document.getElementById('stage');
+  document.onmousedown = function(e) {
+    var event = e || window.event;
+    var obj = event.target || event.srcElement;
+    var x = event.clientX;
+    var y = event.clientY;
+    controller.start(x, y);
+  }
+  document.onmousemove = function(e) {
+    var event = e || window.event;
+    var obj = event.target || event.srcElement;
+    var x = event.clientX;
+    var y = event.clientY;
+    controller.move(x, y);
+  }
+  document.onmouseup = fucntion(e) {
+    var event = e || window.event;
+    var obj = event.target || event.srcElement;
+    var x = event.clientX;
+    var y = event.clientY;
+    controller.end(x, y);
+  }
+
+  function keyUp(e) {
+    var currKey = 0, e=e || event;
+    currKey = e.keyCode || e.which | e.charCode;
+    var keyName = String.fromCharCode(currKey);
+    switch (currKey) {
+      case 37:gameObj.move(0,0);break;
+      case 38:gameObj.move(1,0);break;
+      case 39:gameObj.move(0,1);break;
+      case 40:gameObj.move(1,1);break;
+    }
+  }
+  document.onkeyup = keyUp;
+}
