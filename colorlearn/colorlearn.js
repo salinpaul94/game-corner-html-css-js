@@ -10,6 +10,42 @@ const data = [
     image: "zcolorblue.png",
     text: "blue",
   },
+  {
+    image: "zcolorblack.png",
+    text: "black",
+  },
+  {
+    image: "zcolorgray.png",
+    text: "gray",
+  },
+  {
+    image: "zcolorgreen.png",
+    text: "green",
+  },
+  {
+    image: "zcolorviolet.png",
+    text: "violet",
+  },
+  {
+    image: "zcoloryellow.png",
+    text: "yellow",
+  },
+  {
+    image: "zcolorbrown.png",
+    text: "brown",
+  },
+  {
+    image: "zcolorred.png",
+    text: "red",
+  },
+  {
+    image: "zcolororange.png",
+    text: "orange",
+  },
+  {
+    image: "zcolorpink.png",
+    text: "pink",
+  },
 ];
 
 data.forEach(createBox);
