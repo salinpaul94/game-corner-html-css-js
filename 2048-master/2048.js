@@ -28,6 +28,32 @@ var gameObj = {
     }
     return emptyList;
   },
+
+  newBox: function() {
+    var _this = this;
+
+    var box = function (obj) {
+      var num = Math.random() > 0.9 ? 4 : 2;
+      this.value = num;
+      this.parent = obj;
+      this.domObj = function() {
+        var domBox = document.createElement('span');
+        domBox.innerText = num;
+        domBox.textContent = num;
+        domBox.className = 'row' + obj.position[0] + ' ' + 'cell' + obj.posiion[1] + ' ' + 'num' + num;
+        var root = document.getElementById('stage');
+        root.appendChild(domBox);
+        return domBox;
+      }();
+      obj.boxObj = this;
+    }
+    var emptyList = this.empty();
+    if (emptyList.length) {
+      var randomIndex = Math.floor(Math.random() * emptyList.length);
+      new box(emptyList[randomIndex]);
+      return true;
+    }
+
 };
 
 window.onload = function () {
